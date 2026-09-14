@@ -1,0 +1,1739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CSC Center kralnewah| Digital Seva</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    line-height:1.6;
+    color:#172033;
+    background:#f7faff;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:92%;
+    max-width:1150px;
+    margin:auto;
+}
+
+/* TOP BAR */
+
+.topbar{
+    background:#063b82;
+    color:white;
+    padding:10px 0;
+    font-size:14px;
+}
+
+.topbar .container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+/* NAVBAR */
+
+nav{
+    background:white;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 12px rgba(0,0,0,0.08);
+}
+
+.nav-container{
+    min-height:75px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo-box{
+    width:48px;
+    height:48px;
+    background:linear-gradient(135deg,#0866d8,#00a6ff);
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:12px;
+    font-weight:bold;
+}
+
+.logo-text strong{
+    display:block;
+    font-size:18px;
+}
+
+.logo-text small{
+    color:#68778b;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+.nav-links a{
+    font-weight:bold;
+    font-size:14px;
+}
+
+.nav-links a:hover{
+    color:#0866d8;
+}
+
+.contact-btn{
+    background:#0866d8;
+    color:white !important;
+    padding:11px 17px;
+    border-radius:8px;
+}
+
+.menu{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+    background:linear-gradient(135deg,#edf7ff,#ffffff);
+    padding:90px 0;
+}
+
+.hero-container{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:60px;
+    align-items:center;
+}
+
+.tag{
+    color:#0866d8;
+    font-size:12px;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+.hero h1{
+    font-size:58px;
+    line-height:1.1;
+    margin:18px 0;
+}
+
+.hero h1 span{
+    color:#0866d8;
+}
+
+.hero p{
+    color:#5d6c7f;
+    font-size:18px;
+}
+
+.buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
+
+.btn{
+    padding:14px 20px;
+    border-radius:9px;
+    font-weight:bold;
+    display:inline-block;
+}
+
+.primary{
+    background:#0866d8;
+    color:white;
+}
+
+.whatsapp{
+    background:#12a86b;
+    color:white;
+}
+
+.white-btn{
+    background:white;
+    border:1px solid #d6e1ed;
+}
+
+.hero-card{
+    background:white;
+    padding:32px;
+    border-radius:22px;
+    box-shadow:0 20px 50px rgba(25,65,105,.12);
+    border:1px solid #dfebf7;
+}
+
+.status{
+    color:#10a76a;
+    font-weight:bold;
+    font-size:12px;
+}
+
+.hero-card h2{
+    font-size:30px;
+    margin:20px 0 10px;
+}
+
+.hero-card p{
+    font-size:15px;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+    margin-top:25px;
+}
+
+.stats div{
+    background:#f1f7fd;
+    padding:15px;
+    border-radius:10px;
+}
+
+.stats strong{
+    display:block;
+    font-size:20px;
+}
+
+/* QUICK SERVICES */
+
+.quick{
+    background:white;
+    border-bottom:1px solid #e2eaf2;
+}
+
+.quick-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+}
+
+.quick-item{
+    padding:22px;
+    border-right:1px solid #e2eaf2;
+}
+
+.quick-item b,
+.quick-item small{
+    display:block;
+    margin-left:35px;
+}
+
+.quick-item small{
+    color:#68778b;
+}
+
+/* SECTIONS */
+
+section{
+    padding:85px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.section-title h2{
+    font-size:38px;
+    margin:10px 0;
+}
+
+.section-title p{
+    color:#68778b;
+}
+
+/* SEARCH */
+
+.search{
+    width:100%;
+    padding:16px;
+    border:1px solid #cbd8e5;
+    border-radius:10px;
+    font-size:15px;
+    outline:none;
+}
+
+.search:focus{
+    border-color:#0866d8;
+}
+
+.filters{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:8px;
+    margin:15px 0 30px;
+}
+
+.filters button{
+    border:1px solid #d9e3ed;
+    background:white;
+    padding:9px 14px;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.filters button.active,
+.filters button:hover{
+    background:#0866d8;
+    color:white;
+}
+
+/* SERVICE CARDS */
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+}
+
+.service{
+    background:white;
+    border:1px solid #e0e8f0;
+    padding:20px;
+    border-radius:15px;
+    transition:.2s;
+}
+
+.service:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(25,65,105,.12);
+}
+
+.service-icon{
+    font-size:30px;
+}
+
+.service h3{
+    margin:10px 0 6px;
+    font-size:17px;
+}
+
+.service p{
+    color:#68778b;
+    font-size:13px;
+    min-height:60px;
+}
+
+.service span{
+    display:inline-block;
+    margin-top:12px;
+    background:#edf5ff;
+    color:#0866d8;
+    padding:4px 9px;
+    border-radius:20px;
+    font-size:10px;
+    font-weight:bold;
+}
+
+.hide{
+    display:none;
+}
+
+#noResult{
+    text-align:center;
+    display:none;
+    color:#68778b;
+}
+
+/* ABOUT */
+
+.soft{
+    background:#f1f7fc;
+}
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.about h2{
+    font-size:40px;
+    line-height:1.15;
+    margin:12px 0 20px;
+}
+
+.about p{
+    color:#68778b;
+    margin-bottom:15px;
+}
+
+.info-box{
+    background:white;
+    padding:20px;
+    border-radius:18px;
+    box-shadow:0 15px 35px rgba(25,65,105,.08);
+}
+
+.info{
+    padding:18px;
+    border-bottom:1px solid #e4ebf2;
+}
+
+.info:last-child{
+    border-bottom:none;
+}
+
+/* PROCESS */
+
+.steps{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+}
+
+.step{
+    background:white;
+    border:1px solid #e0e8f0;
+    padding:23px;
+    border-radius:15px;
+}
+
+.step-number{
+    color:#0866d8;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.step h3{
+    margin:10px 0;
+}
+
+.step p{
+    color:#68778b;
+    font-size:13px;
+}
+
+/* FAQ */
+
+.faq{
+    max-width:850px;
+    margin:auto;
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    border:1px solid #e0e8f0;
+}
+
+.question{
+    width:100%;
+    padding:18px;
+    background:white;
+    border:none;
+    border-bottom:1px solid #e0e8f0;
+    display:flex;
+    justify-content:space-between;
+    font-weight:bold;
+    cursor:pointer;
+    text-align:left;
+}
+
+.answer{
+    display:none;
+    padding:18px;
+    color:#68778b;
+    font-size:14px;
+}
+
+/* CONTACT */
+
+.contact{
+    background:linear-gradient(135deg,#063778,#0866d8);
+    color:white;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.contact h2{
+    font-size:40px;
+    line-height:1.15;
+    margin:10px 0 15px;
+}
+
+.contact p{
+    color:#d5e5f7;
+}
+
+.contact-boxes{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+}
+
+.contact-box{
+    background:rgba(255,255,255,.1);
+    border:1px solid rgba(255,255,255,.2);
+    padding:17px;
+    border-radius:12px;
+}
+
+/* DISCLAIMER */
+
+.disclaimer{
+    background:#fff8e7;
+    color:#6d5b36;
+    padding:18px 0;
+    font-size:12px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#081b2e;
+    color:#c6d3e1;
+    padding-top:45px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:40px;
+    padding-bottom:35px;
+}
+
+footer h3{
+    color:white;
+    margin-bottom:12px;
+}
+
+footer a,
+footer span{
+    display:block;
+    margin:6px 0;
+    font-size:13px;
+}
+
+.copyright{
+    text-align:center;
+    border-top:1px solid #1c344c;
+    padding:16px;
+    font-size:12px;
+}
+
+/* FLOATING WHATSAPP */
+
+.floating{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    background:#12a86b;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:25px;
+    box-shadow:0 8px 25px rgba(0,0,0,.25);
+}
+
+/* MOBILE */
+
+@media(max-width:950px){
+
+    .services{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .steps{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+@media(max-width:750px){
+
+    .topbar .container{
+        justify-content:center;
+    }
+
+    .hero-container,
+    .about,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .quick-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .services{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:75px;
+        left:4%;
+        right:4%;
+        background:white;
+        padding:12px;
+        border-radius:10px;
+        box-shadow:0 15px 35px rgba(0,0,0,.12);
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .nav-links.show{
+        display:flex;
+    }
+
+    .menu{
+        display:block;
+    }
+
+}
+
+@media(max-width:500px){
+
+    .hero{
+        padding:60px 0;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .buttons .btn{
+        width:100%;
+        text-align:center;
+    }
+
+    .quick-grid,
+    .services,
+    .steps,
+    .contact-boxes,
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    section{
+        padding:60px 0;
+    }
+
+    .section-title h2,
+    .about h2,
+    .contact h2{
+        font-size:30px;
+    }
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+
+<div class="topbar">
+<div class="container">
+<span>📍 Kralnewah</span>
+<span>
+<a href="tel:9149693449">📞 9149693449</a>
+&nbsp; | &nbsp;
+<a href="mailto:srouf8650@gmail.com">✉ Email</a>
+</span>
+</div>
+</div>
+
+<!-- NAVIGATION -->
+
+<nav>
+<div class="container nav-container">
+
+<a href="#home" class="logo">
+<div class="logo-box">CSC</div>
+<div class="logo-text">
+<strong>CSC Center</strong>
+<small>Kralnewah • Digital Seva</small>
+</div>
+</a>
+
+<div class="menu" onclick="toggleMenu()">☰</div>
+
+<div class="nav-links" id="navLinks">
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#process">How It Works</a>
+<a href="#faq">FAQ</a>
+<a href="#contact" class="contact-btn">Contact</a>
+</div>
+
+</div>
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="container hero-container">
+
+<div>
+
+<div class="tag">DIGITAL SERVICES • KRALNEWAH</div>
+
+<h1>
+Your Local
+<span>CSC & Digital Seva</span>
+Center
+</h1>
+
+<p>
+Convenient assistance for government applications,
+certificates, PAN services, online forms, utility payments,
+education services and many other digital services.
+</p>
+
+<div class="buttons">
+
+<a href="tel:9149693449" class="btn primary">
+📞 Call Now
+</a>
+
+<a href="https://wa.me/919149693449?text=Hello%2C%20I%20want%20information%20about%20CSC%20services."
+target="_blank"
+class="btn whatsapp">
+💬 WhatsApp
+</a>
+
+<a href="#services" class="btn white-btn">
+View Services →
+</a>
+
+</div>
+
+</div>
+
+
+<div class="hero-card">
+
+<div class="status">● CSC SERVICE CENTER</div>
+
+<h2>Digital Help, Close to Home</h2>
+
+<p>
+Get assistance with eligible online applications,
+payments and digital services from one convenient center.
+</p>
+
+<div class="stats">
+
+<div>
+<strong>25+</strong>
+Services
+</div>
+
+<div>
+<strong>Easy</strong>
+Online Help
+</div>
+
+<div>
+<strong>Local</strong>
+Kralnewah
+</div>
+
+<div>
+<strong>Direct</strong>
+Call Support
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- QUICK -->
+
+<div class="quick">
+
+<div class="container quick-grid">
+
+<a class="quick-item" href="#services">
+🪪
+<b>Government</b>
+<small>Certificates & applications</small>
+</a>
+
+<a class="quick-item" href="#services">
+💳
+<b>Financial</b>
+<small>Banking & payments</small>
+</a>
+
+<a class="quick-item" href="#services">
+🎓
+<b>Education</b>
+<small>Forms & admissions</small>
+</a>
+
+<a class="quick-item" href="#services">
+⚡
+<b>Utility</b>
+<small>Bills & recharge</small>
+</a>
+
+</div>
+
+</div>
+
+
+<!-- SERVICES -->
+
+<section id="services">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="tag">OUR SERVICES</div>
+
+<h2>CSC Services & Digital Assistance</h2>
+
+<p>
+Search for a service or select a category.
+</p>
+
+</div>
+
+
+<input
+type="text"
+id="search"
+class="search"
+placeholder="🔎 Search service: PAN, domicile, scholarship, bill..."
+onkeyup="searchServices()"
+>
+
+
+<div class="filters">
+
+<button class="active" onclick="filterServices('all',this)">All</button>
+
+<button onclick="filterServices('government',this)">
+Government
+</button>
+
+<button onclick="filterServices('financial',this)">
+Financial
+</button>
+
+<button onclick="filterServices('education',this)">
+Education
+</button>
+
+<button onclick="filterServices('utility',this)">
+Utility
+</button>
+
+<button onclick="filterServices('health',this)">
+Health
+</button>
+
+<button onclick="filterServices('agriculture',this)">
+Agriculture
+</button>
+
+<button onclick="filterServices('digital',this)">
+Digital
+</button>
+
+<button onclick="filterServices('travel',this)">
+Travel
+</button>
+
+</div>
+
+
+<div class="services" id="serviceList">
+
+
+<!-- GOVERNMENT -->
+
+<div class="service" data-category="government" data-name="aadhaar aadhaar update enrolment">
+<div class="service-icon">🪪</div>
+<h3>Aadhaar Services</h3>
+<p>
+Assistance for eligible Aadhaar-related services
+where authorized.
+</p>
+<span>Government</span>
+</div>
+
+
+<div class="service" data-category="government" data-name="pan card">
+<div class="service-icon">💳</div>
+<h3>PAN Card</h3>
+<p>
+New PAN application and eligible PAN-related
+online assistance.
+</p>
+<span>Government</span>
+</div>
+
+
+<div class="service" data-category="government" data-name="domicile residence certificate">
+<div class="service-icon">🏠</div>
+<h3>Domicile / Residence</h3>
+<p>
+Online assistance for domicile and
+residence-related certificates.
+</p>
+<span>Government</span>
+</div>
+
+
+<div class="service" data-category="government" data-name="income certificate">
+<div class="service-icon">📄</div>
+<h3>Income Certificate</h3>
+<p>
+Application assistance through the
+relevant official portal.
+</p>
+<span>Government</span>
+</div>
+
+
+<div class="service" data-category="government" data-name="caste category certificate">
+<div class="service-icon">📑</div>
+<h3>Category Certificates</h3>
+<p>
+Assistance for eligible category and
+caste certificate applications.
+</p>
+<span>Government</span>
+</div>
+
+
+<div class="service" data-category="government" data-name="birth death certificate">
+<div class="service-icon">📜</div>
+<h3>Birth / Death Certificate</h3>
+<p>
+Online application assistance where
+the service is available.
+</p>
+<span>Government</span>
+</div>
+
+
+<div class="service" data-category="government" data-name="voter election voter id">
+<div class="service-icon">🗳️</div>
+<h3>Voter Services</h3>
+<p>
+Eligible voter registration and
+related online assistance.
+</p>
+<span>Government</span>
+</div>
+
+
+<div class="service" data-category="government" data-name="eshram e shram">
+<div class="service-icon">👷</div>
+<h3>e-Shram</h3>
+<p>
+Assistance with eligible e-Shram
+registration and services.
+</p>
+<span>Government</span>
+</div>
+
+
+<div class="service" data-category="government" data-name="digilocker">
+<div class="service-icon">🔐</div>
+<h3>DigiLocker</h3>
+<p>
+Help with eligible digital document
+access and related processes.
+</p>
+<span>Government</span>
+</div>
+
+
+<div class="service" data-category="government" data-name="government schemes">
+<div class="service-icon">🏛️</div>
+<h3>Government Schemes</h3>
+<p>
+Assistance with eligible government
+schemes and applications.
+</p>
+<span>Government</span>
+</div>
+
+
+<!-- FINANCIAL -->
+
+<div class="service" data-category="financial" data-name="banking">
+<div class="service-icon">🏦</div>
+<h3>Banking Services</h3>
+<p>
+Eligible banking and digital financial
+services through authorized channels.
+</p>
+<span>Financial</span>
+</div>
+
+
+<div class="service" data-category="financial" data-name="aeps digipay">
+<div class="service-icon">💰</div>
+<h3>AEPS / DigiPay</h3>
+<p>
+Assisted payment services where
+authorized and available.
+</p>
+<span>Financial</span>
+</div>
+
+
+<div class="service" data-category="financial" data-name="insurance">
+<div class="service-icon">🛡️</div>
+<h3>Insurance Assistance</h3>
+<p>
+Eligible insurance-related application
+and digital assistance.
+</p>
+<span>Financial</span>
+</div>
+
+
+<div class="service" data-category="financial" data-name="pension nps apy">
+<div class="service-icon">👵</div>
+<h3>Pension / NPS / APY</h3>
+<p>
+Eligible pension and retirement-related
+online services.
+</p>
+<span>Financial</span>
+</div>
+
+
+<!-- EDUCATION -->
+
+<div class="service" data-category="education" data-name="scholarship">
+<div class="service-icon">🎓</div>
+<h3>Scholarship Applications</h3>
+<p>
+Online scholarship form filling and
+application assistance.
+</p>
+<span>Education</span>
+</div>
+
+
+<div class="service" data-category="education" data-name="admission online forms">
+<div class="service-icon">📝</div>
+<h3>Online Forms & Admissions</h3>
+<p>
+College, recruitment and other
+online form assistance.
+</p>
+<span>Education</span>
+</div>
+
+
+<div class="service" data-category="education" data-name="ignou nios">
+<div class="service-icon">📚</div>
+<h3>Education Services</h3>
+<p>
+Eligible education-related online
+assistance.
+</p>
+<span>Education</span>
+</div>
+
+
+<!-- UTILITY -->
+
+<div class="service" data-category="utility" data-name="electricity bill">
+<div class="service-icon">⚡</div>
+<h3>Electricity Bill</h3>
+<p>
+Online electricity bill payment
+assistance.
+</p>
+<span>Utility</span>
+</div>
+
+
+<div class="service" data-category="utility" data-name="water bill">
+<div class="service-icon">💧</div>
+<h3>Water Bill</h3>
+<p>
+Online water bill payment assistance
+where supported.
+</p>
+<span>Utility</span>
+</div>
+
+
+<div class="service" data-category="utility" data-name="mobile recharge dth">
+<div class="service-icon">📱</div>
+<h3>Recharge & DTH</h3>
+<p>
+Mobile recharge and DTH-related
+digital services.
+</p>
+<span>Utility</span>
+</div>
+
+
+<div class="service" data-category="utility" data-name="lpg gas">
+<div class="service-icon">🔥</div>
+<h3>LPG / Gas Services</h3>
+<p>
+Eligible online LPG-related
+assistance.
+</p>
+<span>Utility</span>
+</div>
+
+
+<!-- HEALTH -->
+
+<div class="service" data-category="health" data-name="health telemedicine">
+<div class="service-icon">❤️</div>
+<h3>Health Services</h3>
+<p>
+Eligible health-scheme and
+digital health assistance.
+</p>
+<span>Health</span>
+</div>
+
+
+<div class="service" data-category="health" data-name="ayushman">
+<div class="service-icon">🏥</div>
+<h3>Ayushman Assistance</h3>
+<p>
+Eligible Ayushman-related
+online assistance.
+</p>
+<span>Health</span>
+</div>
+
+
+<!-- AGRICULTURE -->
+
+<div class="service" data-category="agriculture" data-name="agriculture pm kisan">
+<div class="service-icon">🌾</div>
+<h3>Agriculture Services</h3>
+<p>
+Eligible agriculture-scheme and
+application assistance.
+</p>
+<span>Agriculture</span>
+</div>
+
+
+<div class="service" data-category="agriculture" data-name="kcc crop insurance">
+<div class="service-icon">🚜</div>
+<h3>KCC / Crop Services</h3>
+<p>
+Eligible KCC, crop insurance and
+related assistance.
+</p>
+<span>Agriculture</span>
+</div>
+
+
+<!-- DIGITAL -->
+
+<div class="service" data-category="digital" data-name="printing scanning photocopy">
+<div class="service-icon">🖨️</div>
+<h3>Print / Scan / Photocopy</h3>
+<p>
+Document printing, scanning and
+photocopy services.
+</p>
+<span>Digital</span>
+</div>
+
+
+<div class="service" data-category="digital" data-name="photo passport photo">
+<div class="service-icon">📸</div>
+<h3>Photo Services</h3>
+<p>
+Passport-size photo and basic
+digital document preparation.
+</p>
+<span>Digital</span>
+</div>
+
+
+<div class="service" data-category="digital" data-name="online application form filling">
+<div class="service-icon">🌐</div>
+<h3>Online Application Help</h3>
+<p>
+Online registrations, uploads and
+form-filling assistance.
+</p>
+<span>Digital</span>
+</div>
+
+
+<!-- TRAVEL -->
+
+<div class="service" data-category="travel" data-name="railway irctc ticket">
+<div class="service-icon">🚆</div>
+<h3>Railway / Travel</h3>
+<p>
+Eligible ticket booking and
+travel-related assistance.
+</p>
+<span>Travel</span>
+</div>
+
+
+<div class="service" data-category="travel" data-name="bus flight booking">
+<div class="service-icon">✈️</div>
+<h3>Bus / Flight Booking</h3>
+<p>
+Eligible online travel
+booking assistance.
+</p>
+<span>Travel</span>
+</div>
+
+
+</div>
+
+<p id="noResult">
+No matching service found. Please call us for assistance.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="soft" id="about">
+
+<div class="container about">
+
+<div>
+
+<div class="tag">ABOUT THE CENTER</div>
+
+<h2>
+Digital services made easier
+for local residents.
+</h2>
+
+<p>
+CSC Center Kralnewah provides assistance with
+digital and online services, helping residents
+complete eligible applications, payments and
+other online processes.
+</p>
+
+<p>
+Our goal is to make digital services easier to
+understand and access while following the
+requirements of the concerned department or
+service provider.
+</p>
+
+</div>
+
+
+<div class="info-box">
+
+<div class="info">
+📍 <strong>Location</strong>
+<br>
+Kralnewah
+</div>
+
+<div class="info">
+📞 <strong>Phone</strong>
+<br>
+<a href="tel:9149693449">9149693449</a>
+</div>
+
+<div class="info">
+✉️ <strong>Email</strong>
+<br>
+<a href="mailto:hamidsaqlain215@gmail.com">
+hamidsaqlain215@gmail.com
+</a>
+</div>
+
+<div class="info">
+💻 <strong>Services</strong>
+<br>
+Digital & Online Assistance
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PROCESS -->
+
+<section id="process">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="tag">SIMPLE PROCESS</div>
+
+<h2>How It Works</h2>
+
+</div>
+
+
+<div class="steps">
+
+<div class="step">
+<div class="step-number">01</div>
+<h3>Tell Us</h3>
+<p>
+Tell us which online service or
+application you need.
+</p>
+</div>
+
+<div class="step">
+<div class="step-number">02</div>
+<h3>Bring Documents</h3>
+<p>
+Bring the documents required
+for your particular service.
+</p>
+</div>
+
+<div class="step">
+<div class="step-number">03</div>
+<h3>Online Assistance</h3>
+<p>
+We help with the eligible
+online process.
+</p>
+</div>
+
+<div class="step">
+<div class="step-number">04</div>
+<h3>Check Status</h3>
+<p>
+Keep your application details
+safely for future reference.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section class="soft" id="faq">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="tag">FAQ</div>
+
+<h2>Frequently Asked Questions</h2>
+
+</div>
+
+
+<div class="faq">
+
+<button class="question" onclick="faq(this)">
+Which services are available?
+<span>+</span>
+</button>
+
+<div class="answer">
+The website lists common CSC and digital service
+categories. Actual availability depends on the
+center's authorization, concerned portal and
+your eligibility.
+</div>
+
+
+<button class="question" onclick="faq(this)">
+Can I get Aadhaar service here?
+<span>+</span>
+</button>
+
+<div class="answer">
+Aadhaar services require the appropriate authorized
+setup. Contact the center before visiting to confirm
+the exact service available.
+</div>
+
+
+<button class="question" onclick="faq(this)">
+What documents should I bring?
+<span>+</span>
+</button>
+
+<div class="answer">
+Documents differ by service. Contact us first so
+you can confirm which documents are required.
+</div>
+
+
+<button class="question" onclick="faq(this)">
+Can you fill online forms?
+<span>+</span>
+</button>
+
+<div class="answer">
+Yes, online form-filling and document-upload
+assistance can be provided for eligible services.
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<div class="container contact-grid">
+
+<div>
+
+<div class="tag" style="color:#b9ddff;">
+CONTACT CSC CENTER
+</div>
+
+<h2>
+Need help with an online service?
+</h2>
+
+<p>
+Call or WhatsApp before visiting to confirm
+the service, required documents and current
+availability.
+</p>
+
+</div>
+
+
+<div class="contact-boxes">
+
+<a href="tel:9149693449" class="contact-box">
+📞
+<strong>Call</strong>
+<br>
+9149693449
+</a>
+
+<a href="https://wa.me/919149693449?text=Hello%2C%20I%20want%20information%20about%20CSC%20services."
+target="_blank"
+class="contact-box">
+💬
+<strong>WhatsApp</strong>
+<br>
+Chat with us
+</a>
+
+<a href="mailto:hamidsaqlain215@gmail.com"
+class="contact-box">
+✉️
+<strong>Email</strong>
+<br>
+Send Email
+</a>
+
+<div class="contact-box">
+📍
+<strong>Address</strong>
+<br>
+Kralnewah
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- DISCLAIMER -->
+
+<div class="disclaimer">
+
+<div class="container">
+
+<strong>Important:</strong>
+This website provides information and service assistance.
+It does not itself issue Aadhaar, PAN, certificates or
+other government documents. Services are subject to
+official rules, eligibility, verification, portal
+availability and authorization. Never share OTPs
+or passwords with anyone.
+
+</div>
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container footer-grid">
+
+<div>
+
+<div class="logo">
+<div class="logo-box">CSC</div>
+<div class="logo-text">
+<strong style="color:white;">CSC Center</strong>
+<small>Kralnewah • Digital Seva</small>
+</div>
+</div>
+
+<p style="margin-top:15px;">
+Digital services and online assistance
+for the local community.
+</p>
+
+</div>
+
+
+<div>
+
+<h3>Quick Links</h3>
+
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#faq">FAQ</a>
+
+</div>
+
+
+<div>
+
+<h3>Contact</h3>
+
+<a href="tel:9149693449">
+9149693449
+</a>
+
+<a href="mailto:srouf8650@gmail.com">
+Email
+</a>
+
+<span>
+Kralnewah
+</span>
+
+</div>
+
+</div>
+
+
+<div class="copyright">
+
+© <span id="year"></span>
+CSC Center Kralnewah. All Rights Reserved.
+
+</div>
+
+</footer>
+
+
+<!-- WHATSAPP -->
+
+<a
+class="floating"
+href="https://wa.me/919149693449?text=Hello%2C%20I%20want%20information%20about%20CSC%20services."
+target="_blank">
+💬
+</a>
+
+
+<script>
+
+function toggleMenu(){
+
+    document.getElementById("navLinks")
+    .classList.toggle("show");
+
+}
+
+
+let currentCategory = "all";
+
+
+function filterServices(category,button){
+
+    currentCategory = category;
+
+    document
+    .querySelectorAll(".filters button")
+    .forEach(btn => btn.classList.remove("active"));
+
+    button.classList.add("active");
+
+    searchServices();
+
+}
+
+
+function searchServices(){
+
+    let search =
+    document.getElementById("search")
+    .value
+    .toLowerCase()
+    .trim();
+
+    let cards =
+    document.querySelectorAll(".service");
+
+    let found = 0;
+
+    cards.forEach(card => {
+
+        let category =
+        card.getAttribute("data-category");
+
+        let name =
+        card.getAttribute("data-name");
+
+        let text =
+        card.innerText.toLowerCase();
+
+        let categoryMatch =
+        currentCategory === "all" ||
+        category === currentCategory;
+
+        let searchMatch =
+        search === "" ||
+        name.includes(search) ||
+        text.includes(search);
+
+        if(categoryMatch && searchMatch){
+
+            card.classList.remove("hide");
+            found++;
+
+        }else{
+
+            card.classList.add("hide");
+
+        }
+
+    });
+
+
+    document.getElementById("noResult")
+    .style.display =
+    found === 0 ? "block" : "none";
+
+}
+
+
+function faq(button){
+
+    let answer =
+    button.nextElementSibling;
+
+    let isOpen =
+    answer.style.display === "block";
+
+    document
+    .querySelectorAll(".answer")
+    .forEach(item => {
+        item.style.display = "none";
+    });
+
+    document
+    .querySelectorAll(".question span")
+    .forEach(item => {
+        item.innerText = "+";
+    });
+
+    if(!isOpen){
+
+        answer.style.display = "block";
+
+        button.querySelector("span")
+        .innerText = "−";
+
+    }
+
+}
+
+
+document.getElementById("year")
+.innerText = new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
